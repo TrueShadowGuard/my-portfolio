@@ -1,0 +1,45 @@
+.root {
+    margin-top: auto;
+    display: flex;
+    height: 50px;
+    border-top: var(--border-1);
+}
+
+.link, .findMe {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:not(:last-child), .findMe {
+    border-right: var(--border-1);
+}
+
+.link:last-child {
+    border-left: var(--border-1);
+}
+
+.findMe {
+    padding-left: 22px;
+    padding-right: 18px;
+}
+
+.link {
+    width: 50px;
+}
+
+.githubLink {
+    width: auto;
+    margin-left: auto;
+    padding: 14px 22px 15px 23px;
+}

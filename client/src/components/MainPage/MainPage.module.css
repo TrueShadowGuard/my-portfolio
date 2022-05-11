@@ -1,0 +1,41 @@
+.root {
+    margin-top: 180px;
+    margin-bottom: 179px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    margin-right: 129px;
+}
+
+.hi {
+    font-size: 18px;
+    line-height: 24px;
+    color: #E5E9F0;
+}
+
+.name {
+    font-size: 62px;
+    line-height: 81px;
+    color: #E5E9F0;
+}
+
+.who {
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--blue);
+}
+
+.code {
+    margin-top: 81px;
+}
+
+.game {
+    flex-grow: 1;
+    max-width: 510px;
+    min-height: 475px;
+
+    background-color: var(--gray-1);
+}

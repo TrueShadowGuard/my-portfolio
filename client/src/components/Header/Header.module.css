@@ -1,0 +1,35 @@
+.root {
+    display: flex;
+    align-items: center;
+
+    height: 56px;
+    border-bottom: var(--border-1);
+    background-color: var(--dark);
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 22px;
+    padding-right: 154px;
+    border-right: var(--border-1);
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+    padding-right: 23px;
+    padding-left: 24px;
+
+    border-left: var(--border-1);
+}
+
+.contacts a {
+    text-decoration: none;
+    color: inherit;
+}

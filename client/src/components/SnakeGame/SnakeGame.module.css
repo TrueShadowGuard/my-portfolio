@@ -1,0 +1,144 @@
+.root {
+    display: flex;
+    position: relative;
+    max-width: 510px;
+    min-height: 475px;
+    flex-grow: 1;
+    padding: 35px;
+    padding-left: 30px;
+
+    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+    border: 1px solid #0C1616;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(64px);
+    border-radius: 8px;
+}
+
+.bolt {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background: radial-gradient(73.08% 73.08% at 50% 26.92%, #196C6A 15.1%, #114B4A 100%);
+    box-shadow: 2px 2px 4px #0D4341, inset 0 1px 2px #1A8277;
+
+    color: #114944;
+
+    line-height: 13px;
+    text-align: center;
+    user-select: none;
+}
+
+.bolt:nth-child(1) {
+    top: 12px;
+    left: 12px;
+}
+
+.bolt:nth-child(2) {
+    top: 12px;
+    right: 12px;
+}
+
+.bolt:nth-child(3) {
+    bottom: 12px;
+    left: 12px;
+}
+
+.bolt:nth-child(4) {
+    bottom: 12px;
+    right: 12px;
+}
+
+.game {
+    position: relative;
+    --cell-size: 16px;
+}
+
+.gameContainer {
+    max-width: 238px;
+    width: 100%;
+    margin-right: 24px;
+
+    background-color: #011627;
+    border-radius: 8px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 48px;
+    height: 27px;
+
+    border-radius: 8px;
+    border: 1px solid #1E2D3D;
+    background: #010C15;
+    user-select: none;
+    color: #fff;
+    font-size: 10px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+}
+
+.left .triangle {
+    display: block;
+    transform: rotate(-90deg) scaleY(0.8);
+}
+
+.right .triangle {
+    display: block;
+    transform: rotate(90deg) scaleY(0.8);
+}
+
+.bottom .triangle {
+    display: block;
+    transform: rotate(180deg) scaleY(0.8);
+}
+
+.controls {
+    background: rgba(1, 20, 35, 0.19);
+    border-radius: 8px;
+}
+
+.controls .code {
+    padding: 12px;
+    padding-top: 16px;
+    font-size: 14px;
+}
+
+.gameContainer {
+    position: relative;
+}
+
+.startGameButton {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px 14px;
+
+    white-space: nowrap;
+    background-color: var(--orange);
+    color: var(--background-color);
+    border-radius: 8px;
+}
+
+.snakeCell {
+    position: absolute;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: var(--gray-1);
+}
+
+.apple {
+    position: absolute;
+    background-color: var(--orange);
+    width: calc(var(--cell-size) * 2);
+    height: calc(var(--cell-size) * 2);
+}

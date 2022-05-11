@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+#root {
+    --dark: #011627;
+    --gray-1: #1E2D3D;
+    --gray-2: #1A2A3B;
+    --light-gray: #607B96;
+    --orange: #FEA55F;
+    --blue: #4D5BCE;
+    --cyan: #43D9AD;
+    --brown: #E99287;
+
+    --background-color: #01080E;
+
+    --border-1: 1px solid var(--gray-2);
+}
+
+#root {
+    display: flex;
+    padding: 69px;
+    min-height: 100vh;
+    font-family: Fira Code, sans-serif;
+    color: var(--light-gray);
+    background-color: var(--background-color);
+}
+
+#window {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    border: var(--border-1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.comment {
+    color: var(--light-gray);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.string {
+    color: var(--brown);
+}
+
+.white {
+    color: #fff;
+}
+
+.code > * {
+    line-height: 170%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
