@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "concurrently \"npm start --prefix server\" \"npm start --prefix client\""
+    "dev": "concurrently \"npm start --prefix server\" \"npm start --prefix client\"",
+    "postinstall": "cd client && npm install && cd .. && cd server && npm i"
   },
   "devDependencies": {
     "concurrently": "^7.1.0"

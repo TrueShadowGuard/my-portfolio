@@ -129,6 +129,32 @@
     border-radius: 8px;
 }
 
+.gameResult {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    margin-top: 264px;
+}
+
+
+.gameResultText {
+    background-color: #010D17;
+    padding: 12px;
+    color: #43D9AD;
+    font-size: 24px;
+    text-align: center;
+}
+
+.restartButton {
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin: 20px auto;
+}
+
 .snakeCell {
     position: absolute;
     width: var(--cell-size);
@@ -138,7 +164,8 @@
 
 .apple {
     position: absolute;
-    background-color: var(--orange);
-    width: calc(var(--cell-size) * 2);
-    height: calc(var(--cell-size) * 2);
+    background-color: hsl(162, 66%, 56%);
+    width: calc(var(--cell-size) * 1.5);
+    height: calc(var(--cell-size) * 1.5);
+    border-radius: 50%;
 }

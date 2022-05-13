@@ -1,11 +1,13 @@
 import classes from "./SnakeGame.module.css";
+import {GAME_STATES} from "./SnakeGame";
 
-export function startGame($gameContainer) {
+export function startGame($gameContainer, endGame) {
     const {width, height} = $gameContainer.getBoundingClientRect();
     const $game = $gameContainer.querySelector("." + classes.game);
     const CELL_SIZE = 8;
-    const MAX_X = width / CELL_SIZE - 1;
-    const MAX_Y = height / CELL_SIZE - 1;
+    let gameInfo;
+    const MAX_X = Math.floor(width / CELL_SIZE) - 1;
+    const MAX_Y = Math.floor(height / CELL_SIZE) - 1;
     $game.style.cssText = `--cell-size: ${CELL_SIZE}px`;
 
     const DIRECTIONS = {TOP: {dx: 0, dy: -1}, BOTTOM: {dx: 0, dy: 1}, LEFT: {dx: -1, dy: 0}, RIGHT: {dx: 1, dy: 0}};
@@ -34,24 +36,57 @@ export function startGame($gameContainer) {
 
     let direction = DIRECTIONS.BOTTOM;
     let snakeCells = [{x: 0, y: 0}, {x: 1, y: 0}, {x: 2, y: 0}];
-    let apple = createApple();
-    console.log(apple)
+    let $apple = document.createElement("div");
+    $apple.classList.add(classes.apple);
+    setRandomPositionToApple();
 
-    const gameTimerId = setInterval(tick, 50);
+    const gameLoop = createLoop();
 
-    return {gameTimerId}
+    return {gameLoop: gameLoop}
 
-    function tick() {
+    function update() {
         $game.innerHTML = "";
-        const tailCell = snakeCells.shift();
+        renderSnake(snakeCells);
+        renderApple($apple);
+
         const headCell = snakeCells[snakeCells.length - 1];
 
-        tailCell.x = headCell.x + direction.dx;
-        tailCell.y = headCell.y + direction.dy;
-        snakeCells.push(tailCell);
+        const isHeadInsideApple = defineIsHeadInsideApple(headCell, $apple);
+        if(isHeadInsideApple) {
+            const newCell = {...headCell};
+            newCell.x += direction.dx;
+            newCell.y += direction.dy;
+            snakeCells.push(newCell);
+            if(snakeCells.length > 4) return _endGame({result: GAME_STATES.WIN});
+            $apple = setRandomPositionToApple();
+        } else {
+            const tailCell = snakeCells.shift();
+            tailCell.x = headCell.x + direction.dx;
+            tailCell.y = headCell.y + direction.dy;
+            snakeCells.push(tailCell);
+        }
 
-        renderSnake(snakeCells);
-        renderApple(apple);
+        const isSnakeCollide = defineIsSnakeCollide(snakeCells);
+        if(isSnakeCollide) return _endGame({result: GAME_STATES.LOSE});
+    }
+
+    function createLoop() {
+        let isGameOn = true;
+
+        function tick() {
+            if(!isGameOn) {
+                endGame(gameInfo);
+                return;
+            }
+            update();
+            setTimeout(tick, 35)
+        }
+
+        tick();
+
+        return {
+            setIsGameOn: (value) => isGameOn = value
+        }
     }
 
     function renderSnake(snakeCells) {
@@ -69,17 +104,36 @@ export function startGame($gameContainer) {
         }
     }
     
-    function renderApple(apple) {
-        const $apple = document.createElement("div");
-        $apple.classList.add(classes.apple);
-        $apple.style.left = apple.x * CELL_SIZE + "px";
-        $apple.style.top = apple.y * CELL_SIZE + "px";
-        $game.append($apple);
+    function renderApple($apple) {
+        $apple.style.left = $apple.x * CELL_SIZE + "px";
+        $apple.style.top = $apple.y * CELL_SIZE + "px";
     }
 
-    function createApple() {
+    function setRandomPositionToApple() {
         const x = Math.ceil(Math.random() * (MAX_X - 1));
         const y = Math.ceil(Math.random() * (MAX_Y - 1));
-        return {x, y};
+        $apple.dataset.x = x;
+        $apple.dataset.y = y;
+    }
+
+    function defineIsHeadInsideApple(head, apple) {
+        const dx = head.x - apple.x;
+        const dy = head.y - apple.y;
+        return dx <= 1 && dx >= 0 && dy <= 1 && dy >= 0;
+    }
+
+    function defineIsSnakeCollide(snakeCells) {
+        const headCell = snakeCells[snakeCells.length - 1];
+
+        for(let snakeCell of snakeCells.slice(0, -1)) {
+            if(headCell.x === snakeCell.x && headCell.y === snakeCell.y) return true;
+        }
+
+        return false;
+    }
+
+    function _endGame(_gameInfo) {
+        gameInfo = _gameInfo;
+        gameLoop.setIsGameOn(false);
     }
 }
