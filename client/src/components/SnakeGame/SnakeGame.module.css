@@ -145,6 +145,8 @@
     text-align: center;
 }
 
+.bolts {}
+
 .restartButton {
     display: block;
     border: none;
@@ -168,4 +170,49 @@
     width: calc(var(--cell-size) * 1.5);
     height: calc(var(--cell-size) * 1.5);
     border-radius: 50%;
+
+    animation: animate 1s infinite;
+}
+
+@keyframes animate {
+    from {
+        box-shadow: 0 0 0 0px hsla(162, 66%, 56%, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 5px hsla(162, 66%, 56%, 0);
+    }
+}
+
+.applesLeft {
+    margin: 0 15px;
+    --cell-size: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+}
+
+.applesLeft .apple {
+    position: static;
+    margin: 0 auto;
+}
+
+.foodLeft {
+    margin: 20px 0 11px 15px;
+}
+
+.transparent {
+    opacity: 0.3;
+    animation: none;
+}
+
+.skipButton {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
 }

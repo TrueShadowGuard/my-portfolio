@@ -15,8 +15,10 @@ const MainPage = (props) => {
                     <span className="comment">// you can also see it on my Github page</span><br/>
                     <span className="blue">const </span>
                     <span className="cyan">githubLink </span>
-                    <span className="white"> = </span>
-                    <span className="string">“https://github.com/example/url”</span>
+                    <span className="white"> = (</span> <br/>
+                    <span className="string">&nbsp;&nbsp;&nbsp;&nbsp;“https://github.com/TrueShadowGuard/my-portfolio”</span> <br/>
+                    <span className="white">)</span>
+                    <span className="orange">;</span>
                 </p>
             </div>
             <SnakeGame />
