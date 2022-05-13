@@ -1,4 +1,7 @@
 .root {
+    position: relative;
+    z-index: 10;
+
     margin-top: auto;
     display: flex;
     height: 50px;

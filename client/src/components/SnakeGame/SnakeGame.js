@@ -3,6 +3,8 @@ import classes from "./SnakeGame.module.css";
 import classNames from "classnames";
 import {startGame} from "./startGame.js";
 
+import bgBlurs from "../../images/Background Blurs.svg";
+
 const APPLES_COUNT = 10;
 
 export const GAME_STATES = {
@@ -40,6 +42,7 @@ const SnakeGame = (props) => {
                     skip
                 </button>
             }
+            <img className={classes.blurs} src={bgBlurs} alt="blur"/>
         </div>
     );
 

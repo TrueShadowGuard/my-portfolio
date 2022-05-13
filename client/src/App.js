@@ -5,8 +5,10 @@ import Footer from "./components/Footer/Footer.js";
 
 import './main.css';
 import {BrowserRouter} from "react-router-dom";
+import {makeAutoObservable} from "mobx";
+import {observer} from "mobx-react-lite";
 
-function App() {
+const App = observer(() => {
     return (
         <BrowserRouter>
             <div id="window">
@@ -17,6 +19,14 @@ function App() {
             </div>
         </BrowserRouter>
     );
+});
+
+class AppStore {
+    constructor() {
+        makeAutoObservable(this);
+    }
 }
+export const appStore = new AppStore();
+window._appStore = appStore
 
 export default App;

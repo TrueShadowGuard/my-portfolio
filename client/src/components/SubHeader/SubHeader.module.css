@@ -1,0 +1,39 @@
+.root {
+    display: flex;
+    border-bottom: var(--border-1);
+    height: 41px;
+    width: 100%;
+}
+
+.header {
+    border-right: var(--border-1);
+    width: 292px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.triangle {
+    margin-left: 22px;
+    margin-right: 11px;
+    cursor: pointer;
+}
+
+.tabs {
+    flex-grow: 1;
+}
+
+.tab {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 12px;
+    border-right: var(--border-1);
+}
+
+.cross {
+    margin-left: 48px;
+    cursor: pointer;
+}

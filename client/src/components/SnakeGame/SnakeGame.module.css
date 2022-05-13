@@ -216,3 +216,10 @@
     padding: 10px 14px;
     border-radius: 8px;
 }
+
+.blurs {
+    position: absolute;
+    top: -230px;
+    left: -200px;
+    z-index: -1;
+}
