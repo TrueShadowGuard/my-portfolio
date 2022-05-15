@@ -14,7 +14,7 @@ const SubHeader = ({header, tabName, ...props}) => {
             </header>
             <div className={classes.tabs}>
                 <div className={classes.tab}>
-                    {tabName}
+                    <p className={classes.tabName}>{tabName}</p>
                     <img className={classes.cross} src={cross} alt="cross"/>
                 </div>
             </div>

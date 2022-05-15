@@ -1,7 +1,6 @@
 .root {
     width: 292px;
     border-right: var(--border-1);
-    flex-grow: 1;
     padding-left: 22px;
     padding-top: 17px;
 }

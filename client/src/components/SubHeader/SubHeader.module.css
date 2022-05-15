@@ -25,7 +25,8 @@
 
 .tab {
     height: 100%;
-    width: max-content;
+    width: 250px;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     padding-left: 14px;
@@ -33,7 +34,14 @@
     border-right: var(--border-1);
 }
 
+.tabName {
+    width: 230px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .cross {
-    margin-left: 48px;
+    margin-left: auto;
     cursor: pointer;
 }
