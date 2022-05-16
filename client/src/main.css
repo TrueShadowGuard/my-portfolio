@@ -13,6 +13,7 @@
     --background-color: #01080E;
 
     --border-1: 1px solid var(--gray-2);
+    --tab-height: 41px;
 }
 
 #root {

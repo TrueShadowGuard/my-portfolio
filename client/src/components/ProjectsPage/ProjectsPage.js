@@ -9,23 +9,26 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import church from "../../images/Church.jpg";
 import tanks from "../../images/Tanks.png";
 import {cssTag, htmlTag, nodeTag, reactTag} from "./consts";
+import TwoColumns from "../TwoColumns/TwoColumns";
 
 const ProjectsPage = observer((props) => {
     return (
         <div className={classNames(classes.root, props.className)}>
-            <SubHeader header={"projects"} tabName={projectsPageStore.filtersString}/>
-            <div className={classes.projectsAndFilters}>
+            <TwoColumns>
                 <ProjectFilters/>
                 <Projects/>
-            </div>
+            </TwoColumns>
         </div>
     );
 });
 
 const Projects = observer(() => {
     return (
-        <div className={classes.projects}>
-            {projectsPageStore.filteredProjects.map(project => <ProjectCard {...project}/>)}
+        <div>
+            <SubHeader header={"projects"} tabName={projectsPageStore.filtersString}/>
+            <div className={classes.projects}>
+                {projectsPageStore.filteredProjects.map(project => <ProjectCard {...project}/>)}
+            </div>
         </div>
     )
 });

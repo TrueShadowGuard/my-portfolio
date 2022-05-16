@@ -8,10 +8,7 @@ import cross from "../../images/cross.svg"
 const SubHeader = ({header, tabName, ...props}) => {
     return (
         <div className={classNames(classes.root, props.className)}>
-            <header className={classes.header}>
-                <img className={classes.triangle} src={triangle} alt="triangle"/>
-                {header}
-            </header>
+
             <div className={classes.tabs}>
                 <div className={classes.tab}>
                     <p className={classes.tabName}>{tabName}</p>

@@ -4,13 +4,6 @@
     flex-direction: column;
 }
 
-.projectsAndFilters {
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
-}
-
 .projects {
     display: flex;
     justify-content: center;

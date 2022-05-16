@@ -1,5 +1,4 @@
 import Header from "./components/Header/Header.js";
-import ControlPanel from "./components/ControlPanel/ControlPanel.js";
 import Main from "./components/Main/Main.js";
 import Footer from "./components/Footer/Footer.js";
 
@@ -13,20 +12,11 @@ const App = observer(() => {
         <BrowserRouter>
             <div id="window">
                 <Header/>
-                <ControlPanel/>
                 <Main/>
                 <Footer/>
             </div>
         </BrowserRouter>
     );
 });
-
-class AppStore {
-    constructor() {
-        makeAutoObservable(this);
-    }
-}
-export const appStore = new AppStore();
-window._appStore = appStore
 
 export default App;

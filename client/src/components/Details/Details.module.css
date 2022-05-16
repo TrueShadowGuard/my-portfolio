@@ -1,0 +1,41 @@
+.root {
+    --max-height: 500px;
+}
+
+.header {
+    border-right: var(--border-1);
+    border-bottom: var(--border-1);
+    width: 292px;
+    height: var(--tab-height);
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.triangle {
+    margin-left: 22px;
+    margin-right: 11px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.button {
+    position: relative;
+    z-index: 10;
+    background-color: var(--dark);
+    border: none;
+}
+
+.detailsAnimation {
+    max-height: 0;
+    transition: max-height 1.2s linear;
+    overflow: hidden;
+}
+
+.open .detailsAnimation {
+    max-height: var(--max-height);
+}
+
+.open .triangle {
+    transform: rotate(180deg);
+}

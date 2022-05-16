@@ -1,22 +1,8 @@
 .root {
     display: flex;
     border-bottom: var(--border-1);
-    height: 41px;
+    height: var(--tab-height);
     width: 100%;
-}
-
-.header {
-    border-right: var(--border-1);
-    width: 292px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-
-.triangle {
-    margin-left: 22px;
-    margin-right: 11px;
-    cursor: pointer;
 }
 
 .tabs {
