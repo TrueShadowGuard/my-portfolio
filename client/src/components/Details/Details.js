@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import classes from "./Details.module.css";
 import classNames from "classnames";
 
-const Details = ({summary, details, ...props}) => {
+const Details = ({summary, children, ...props}) => {
     const [areDetailsOpen, setDetailsOpen] = useState(props.defaultOpen || false);
 
     const rootClass = classNames({
@@ -16,7 +16,7 @@ const Details = ({summary, details, ...props}) => {
     return (
         <div className={rootClass} ref={rootRef}>
             <button className={classes.button} onClick={handleSummaryClick}>{summary}</button>
-            <div className={classes.detailsAnimation}>{details}</div>
+            <div className={classes.detailsAnimation}>{children}</div>
         </div>
     );
 
