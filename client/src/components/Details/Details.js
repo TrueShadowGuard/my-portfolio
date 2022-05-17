@@ -1,9 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import classes from "./Details.module.css";
 import classNames from "classnames";
 
 const Details = ({summary, details, ...props}) => {
-    const [areDetailsOpen, setDetailsOpen] = useState(false);
+    const [areDetailsOpen, setDetailsOpen] = useState(props.defaultOpen || false);
 
     const rootClass = classNames({
         [classes.root]: true,

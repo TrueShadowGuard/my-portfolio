@@ -90,7 +90,8 @@ class ProjectsPageStore {
         return this.projects
             .filter(project =>
                 filters.every(filter => project.tags.includes(filter))
-            );
+            )
+            .sort((a,b) => a.tags.length > b.tags.length ? 1 : -1);
     }
 }
 
