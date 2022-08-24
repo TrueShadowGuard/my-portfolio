@@ -26,14 +26,13 @@
     border: none;
 }
 
-.detailsAnimation {
-    max-height: 0;
-    transition: max-height 1.2s linear;
+.info {
+    height: 0;
     overflow: hidden;
 }
 
-.open .detailsAnimation {
-    max-height: var(--max-height);
+.open .info, .closing .info {
+    border-bottom: var(--border-1);
 }
 
 .open .triangle {
