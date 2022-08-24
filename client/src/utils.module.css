@@ -1,4 +1,4 @@
-.root {
+.twoColumns {
     flex-grow: 1;
     display: grid;
     grid-template-columns: auto 1fr;

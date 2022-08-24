@@ -9,15 +9,15 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import church from "../../images/Church.jpg";
 import tanks from "../../images/Tanks.png";
 import {cssTag, htmlTag, nodeTag, reactTag} from "./consts";
-import TwoColumns from "../TwoColumns/TwoColumns";
+import utils from "../../utils.module.css";
 
 const ProjectsPage = observer((props) => {
     return (
         <div className={classNames(classes.root, props.className)}>
-            <TwoColumns>
+            <div className={utils.twoColumns}>
                 <ProjectFilters/>
                 <Projects/>
-            </TwoColumns>
+            </div>
         </div>
     );
 });

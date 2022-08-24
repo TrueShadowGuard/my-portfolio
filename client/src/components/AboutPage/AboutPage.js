@@ -1,12 +1,37 @@
 import React from 'react';
+
 import classes from "./AboutPage.module.css";
+import utils from "../../utils.module.css";
 import classNames from "classnames";
-import TwoColumns from "../TwoColumns/TwoColumns";
+
 import Details from "../Details/Details";
 import DetailsHeader from "../Details/DetailsHeader";
 
 import mail from "../../images/mail-icon.svg";
 import phone from "../../images/phone-icon.svg";
+
+const AboutPage = (props) => {
+    return (
+        <div className={classNames(classes.root, props.className)}>
+            <div className={utils.twoColumns}>
+                <Categories/>
+            </div>
+        </div>
+    );
+};
+
+function Categories() {
+    return (
+        <div className={classes.firstColumn}>
+            <Details summary={<DetailsHeader header={"personal-info"}/>} defaultOpen>
+                personal info
+            </Details>
+            <Details summary={<DetailsHeader header={"contacts"}/>}>
+                <Contacts />
+            </Details>
+        </div>
+    );
+}
 
 function Contacts() {
     return (
@@ -24,28 +49,5 @@ function Contacts() {
         </div>
     )
 }
-
-function Categories() {
-    return (
-        <div className={classes.firstColumn}>
-            <Details summary={<DetailsHeader header={"personal-info"}/>} defaultOpen>
-                personal info
-            </Details>
-            <Details summary={<DetailsHeader header={"contacts"}/>}>
-                <Contacts />
-            </Details>
-        </div>
-    );
-}
-
-const AboutPage = (props) => {
-    return (
-        <div className={classNames(classes.root, props.className)}>
-            <TwoColumns>
-                <Categories/>
-            </TwoColumns>
-        </div>
-    );
-};
 
 export default AboutPage;
