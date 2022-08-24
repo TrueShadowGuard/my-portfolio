@@ -6,8 +6,6 @@ module.exports = {
   extends: [
     "plugin:react/recommended",
   ],
-  overrides: [
-  ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module"
@@ -17,6 +15,7 @@ module.exports = {
   ],
   rules: {
     quotes: ["warn", "double"],
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
   }
 }

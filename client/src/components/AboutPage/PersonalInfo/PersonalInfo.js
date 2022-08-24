@@ -1,10 +1,14 @@
 import React from "react";
+import classes from "./PersonalInfo.module.css";
 import classNames from "classnames";
+import File from "./File"
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ files = [{name: "bio"}] }) => {
     return (
-        <div>
-
+        <div className={classes.root}>
+            {files.map((file, index) => (
+              <File key={index} file={file}/>
+            ))}
         </div>
     );
 };

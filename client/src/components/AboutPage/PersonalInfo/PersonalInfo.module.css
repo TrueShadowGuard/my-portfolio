@@ -1,0 +1,21 @@
+.root {
+    padding: 2px 20px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.file {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.fileIcon {
+    height: 100%
+}
+
+.fileName {
+    color: var(--light-gray)
+}
