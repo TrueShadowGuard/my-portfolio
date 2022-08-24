@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import classes from "./ProjectsPage.module.css";
 import classNames from "classnames";
 import SubHeader from "../SubHeader/SubHeader";

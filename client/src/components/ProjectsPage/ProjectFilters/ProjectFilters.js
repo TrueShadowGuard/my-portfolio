@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import classes from "./ProjectFilters.module.css";
 import classNames from "classnames";
 import CheckboxWithImage from "../CheckboxWithImage/CheckboxWithImage";

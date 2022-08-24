@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from './Details.module.css';
+import React from "react";
+import classes from "./Details.module.css";
 import triangle from "../../images/triangle.svg";
 import classNames from "classnames";
 

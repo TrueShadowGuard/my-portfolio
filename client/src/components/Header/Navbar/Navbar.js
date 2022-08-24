@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import classes from "./Navbar.module.css";
 import classNames from "classnames";
 import {NavLink} from "react-router-dom";

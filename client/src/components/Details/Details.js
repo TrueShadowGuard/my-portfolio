@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from "react";
 import classes from "./Details.module.css";
 import classNames from "classnames";
 import anime from "animejs";
@@ -52,7 +52,7 @@ const Details = ({summary, children, ...props}) => {
             anime({
                 targets: $info,
                 height: height,
-                easing: 'easeInOutQuad',
+                easing: "easeInOutQuad",
                 duration: animeDuration,
             });
         } else {
@@ -61,7 +61,7 @@ const Details = ({summary, children, ...props}) => {
             anime({
                 targets: $info,
                 height: 0,
-                easing: 'easeInOutQuad',
+                easing: "easeInOutQuad",
                 duration: animeDuration,
                 complete: function () {
                     $root.classList.remove(classes.closing);

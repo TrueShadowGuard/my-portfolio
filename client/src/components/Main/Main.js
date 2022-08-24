@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {Routes, Route} from "react-router-dom"
 import MainPage from "../MainPage/MainPage.js";
 import AboutPage from "../AboutPage/AboutPage.js";

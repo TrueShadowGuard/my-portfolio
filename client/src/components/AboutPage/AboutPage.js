@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import classes from "./AboutPage.module.css";
 import utils from "../../utils.module.css";
@@ -9,6 +9,7 @@ import DetailsHeader from "../Details/DetailsHeader";
 
 import mail from "../../images/mail-icon.svg";
 import phone from "../../images/phone-icon.svg";
+import PersonalInfo from "./PersonalInfo/PersonalInfo";
 
 const AboutPage = (props) => {
     return (
@@ -24,7 +25,7 @@ function Categories() {
     return (
         <div className={classes.firstColumn}>
             <Details summary={<DetailsHeader header={"personal-info"}/>} defaultOpen>
-                personal info
+                <PersonalInfo />
             </Details>
             <Details summary={<DetailsHeader header={"contacts"}/>}>
                 <Contacts />
