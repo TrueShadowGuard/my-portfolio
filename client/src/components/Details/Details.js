@@ -3,6 +3,8 @@ import classes from "./Details.module.css";
 import classNames from "classnames";
 import anime from "animejs";
 
+export const DetailsContext = React.createContext(null);
+
 const Details = ({summary, children, ...props}) => {
     const [areDetailsOpen, setDetailsOpen] = useState(props.defaultOpen || false);
 
@@ -19,10 +21,12 @@ const Details = ({summary, children, ...props}) => {
     useEffect(setHeight);
 
     return (
-        <div className={rootClass} ref={rootRef}>
-            <button className={classes.button} onClick={handleSummaryClick}>{summary}</button>
-            <div className={classes.info} ref={infoRef}>{children}</div>
-        </div>
+      <DetailsContext.Provider value={{ setHeight }}>
+          <div className={rootClass} ref={rootRef}>
+              <button className={classes.button} onClick={handleSummaryClick}>{summary}</button>
+              <div className={classes.info} ref={infoRef}>{children}</div>
+          </div>
+      </DetailsContext.Provider>
     );
 
     function handleSummaryClick() {
