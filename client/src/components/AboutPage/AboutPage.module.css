@@ -34,5 +34,10 @@
     margin-top: 18px;
     font-size: 18px;
     line-height: 27px;
+    overflow: auto;
 }
 
+.index {
+    user-select: none;
+    margin-right: 24px;
+}

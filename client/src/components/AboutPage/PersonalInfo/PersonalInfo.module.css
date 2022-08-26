@@ -24,6 +24,10 @@
     color: var(--light-gray)
 }
 
+.folder .nodeName {
+    color: #fff;
+}
+
 .arrow {
     position: absolute;
     left: -21px;

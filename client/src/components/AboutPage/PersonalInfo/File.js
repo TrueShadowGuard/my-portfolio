@@ -1,17 +1,23 @@
 import React from "react"
-import classes from "./PersonalInfo.module.css";
+import classes from "./PersonalInfo.module.css"
 import FileIcon from "../../../images/FileIcon"
 import aboutPageStore from "../aboutPageStore"
+import classNames from "classnames"
 
-const File = ({file}) => {
+const File = ({ file }) => {
+
+  const fileClassName = classNames({
+    [classes.node]: true,
+  })
+
   return (
-    <div className={classes.node} onClick={handleClick}>
+    <div className={fileClassName} onClick={handleClick}>
       <FileIcon className={classes.nodeIcon}/>
       <p className={classes.nodeName}>{file.name}</p>
     </div>
   )
 
-  function handleClick() {
+  function handleClick () {
     aboutPageStore.setCurrentFile(file)
   }
 }

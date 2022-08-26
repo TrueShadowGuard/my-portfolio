@@ -12,7 +12,8 @@ const Folder = ({ folder }) => {
 
   const folderClass = classNames({
     [classes.node]: true,
-    [classes.folderOpen]: open
+    [classes.folder]: true,
+    [classes.folderOpen]: open,
   });
 
   const {setHeight} = useContext(DetailsContext);
@@ -21,7 +22,7 @@ const Folder = ({ folder }) => {
     <>
       <div className={folderClass} onClick={handleClick}>
         <img className={classes.arrow} src={arrowDown} alt=""/>
-        <FolderIcon className={classes.nodeIcon}/>
+        <FolderIcon className={classes.nodeIcon} color={folder.color}/>
         <p className={classes.nodeName}>{folder.name}</p>
       </div>
       {open && folder.files.map((file, i) => <File file={file} key={i}/>)}

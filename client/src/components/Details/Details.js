@@ -49,7 +49,7 @@ const Details = ({summary, children, ...props}) => {
 
         const height = getMaxHeight($info);
 
-        const animeDuration = height * 5;
+        const animeDuration = height * 3;
 
         if(areDetailsOpen) {
             // open
