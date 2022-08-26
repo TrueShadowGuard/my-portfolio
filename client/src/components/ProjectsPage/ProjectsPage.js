@@ -25,7 +25,7 @@ const ProjectsPage = observer((props) => {
 const Projects = observer(() => {
     return (
         <div>
-            <SubHeader header={"projects"} tabName={projectsPageStore.filtersString}/>
+            <SubHeader tabName={projectsPageStore.filtersString}/>
             <div className={classes.projects}>
                 {projectsPageStore.filteredProjects.map(project => <ProjectCard {...project}/>)}
             </div>

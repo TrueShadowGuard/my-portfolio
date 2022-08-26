@@ -18,7 +18,9 @@ const File = ({ file }) => {
   )
 
   function handleClick () {
-    aboutPageStore.setCurrentFile(file)
+    if(file.text) {
+      aboutPageStore.setCurrentFile(file)
+    }
   }
 }
 
