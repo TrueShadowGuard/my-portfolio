@@ -81,3 +81,20 @@ button {
 a {
     text-decoration: none;
 }
+
+.w-tc-editor {
+    --color-fg-default: #5565E8;
+    --color-canvas-subtle: #161b22;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant: #FEA55F;
+    --color-prettylights-syntax-string: #5565E8;
+    --color-prettylights-syntax-keyword: #C98BDF;
+    --color-prettylights-syntax-markup-bold: #24292f;
+}
+
+.w-tc-editor .token.operator.operator.operator {
+    color: #C98BDF;
+}

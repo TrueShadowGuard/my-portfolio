@@ -11,9 +11,6 @@ const Header = (props) => {
                 <p>shadow-guard</p>
             </div>
             <Navbar/>
-            <div className={classes.contacts}>
-                <NavLink to={"/about-me#contacts"}>_contact-me</NavLink>
-            </div>
         </div>
     );
 };
