@@ -1,0 +1,34 @@
+.root {
+    display: block;
+    width: 100%;
+}
+
+.label {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+    height: 41px;
+    padding: 4px 8px;
+
+    background: #011221;
+
+    font-family: "Fira Code", sans-serif;
+    color: #465E77;
+    caret-color: #465E77;
+    font-size: 16px;
+    line-height: 21px;
+
+    border: 1px solid #1E2D3D;
+    border-radius: 8px;
+}
+
+.field:focus {
+    border: 1px solid #1E2D3D;
+}
+
+textarea.field {
+    height: 145px;
+}

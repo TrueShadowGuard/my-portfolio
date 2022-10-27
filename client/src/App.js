@@ -1,10 +1,9 @@
-import Header from "./components/Header/Header.js";
-import Main from "./components/Main/Main.js";
-import Footer from "./components/Footer/Footer.js";
+import Header from "./components/special/Header/Header.js";
+import Main from "./components/special/Main/Main.js";
+import Footer from "./components/special/Footer/Footer.js";
 
 import "./main.css";
 import {BrowserRouter} from "react-router-dom";
-import {makeAutoObservable} from "mobx";
 import {observer} from "mobx-react-lite";
 
 const App = observer(() => {

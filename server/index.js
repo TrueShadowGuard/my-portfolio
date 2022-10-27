@@ -8,8 +8,6 @@ const indexHtmlPath = path.join(staticPath, "index.html");
 
 const app = express();
 
-
-
 app.use(express.static(staticPath));
 app.use((req, res) => {
   res.sendFile(indexHtmlPath);
