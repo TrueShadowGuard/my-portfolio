@@ -47,6 +47,7 @@ const ContactPage = () => {
       <div className={classes.codeColumn}>
         <div className={classes.code}>
           <CodeEditor
+            tabIndex={-1}
             value={code}
             onChange={e => setCode(e.target.value)}
             language="js"

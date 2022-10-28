@@ -1,7 +1,14 @@
 import React from "react"
 import classes from "./Navbar.module.css"
 import classNames from "classnames"
-import { NavLink } from "react-router-dom"
+import {NavLink} from "react-router-dom"
+
+const links = [
+  {to: "/", text: "_hello"},
+  {to: "/about-me", text: "_about-me"},
+  {to: "/projects", text: "_projects"},
+  {to: "/contact-me", text: "_contact-me"},
+]
 
 const Navbar = (props) => {
   const getLinkClass = (navData) => classNames({
@@ -12,10 +19,12 @@ const Navbar = (props) => {
   return (
     <nav className={classNames(classes.root, props.className)}>
       <ul className={classes.list}>
-        <li><NavLink className={getLinkClass} end to="/">_hello</NavLink></li>
-        <li><NavLink className={getLinkClass} to="/about-me">_about-me</NavLink></li>
-        <li><NavLink className={getLinkClass} to="/projects">_projects</NavLink></li>
-        <li><NavLink className={getLinkClass} to="/contact-me">_contact-me</NavLink></li>
+        {links.map(link => (
+          <li key={link.to + link.text}>
+            <NavLink className={getLinkClass} end to={link.to}><span className={classes.linkText}>{link.text}</span></NavLink>
+          </li>
+        ))
+        }
       </ul>
     </nav>
   )

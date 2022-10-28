@@ -10,7 +10,7 @@
     background-color: var(--dark);
 }
 
-.portfolio {
+.nickname {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,7 @@
     padding-left: 22px;
     padding-right: 154px;
     border-right: var(--border-1);
+    white-space: nowrap;
 }
 
 .contacts {
@@ -35,4 +36,16 @@
 .contacts a {
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+    .nickname {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .nickname {
+        display: none;
+    }
 }

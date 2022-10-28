@@ -5,7 +5,7 @@ import AboutPage from "../AboutPage/AboutPage.js"
 import ProjectsPage from "../ProjectsPage/ProjectsPage.js"
 import ContactPage from "../ContactPage/ContactPage"
 
-const Main = (props) => {
+const Main = () => {
   return (
     <Routes>
       <Route path={"/"} element={<MainPage/>}/>

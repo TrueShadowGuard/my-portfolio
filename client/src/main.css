@@ -98,3 +98,14 @@ a {
 .w-tc-editor .token.operator.operator.operator {
     color: #C98BDF;
 }
+
+@media screen and (max-width: 1000px) {
+    #root {
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #root {
+        padding: 0;
+    }
+}
