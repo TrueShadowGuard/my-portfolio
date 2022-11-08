@@ -2,7 +2,6 @@ import React from 'react';
 import classes from "./MainPage.module.css";
 import classNames from "classnames";
 import SnakeGame from "../SnakeGame/SnakeGame.js";
-import {appStore} from "../../../App";
 
 const MainPage = (props) => {
     return (

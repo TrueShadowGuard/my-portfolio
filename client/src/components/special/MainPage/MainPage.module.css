@@ -7,24 +7,25 @@
 }
 
 .text {
-    margin-right: 129px;
+    margin-right: 9.5%;
 }
 
 .hi {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.125em;
+    line-height: 133.333%;
     color: #E5E9F0;
 }
 
 .name {
-    font-size: 62px;
-    line-height: 81px;
+    font-size: 3.875em;
+    line-height: 130%;
     color: #E5E9F0;
+    white-space: nowrap;
 }
 
 .who {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 2em;
+    line-height: 131.25%;
     color: var(--blue);
 }
 
@@ -38,4 +39,28 @@
     min-height: 475px;
 
     background-color: var(--gray-1);
+}
+
+@media screen and (max-width: 1300px){
+    .text {
+        margin: 0 30px 20px;
+        width: 100%;
+    }
+    .root {
+        flex-wrap: wrap;
+    }
+
+    .game {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .text {
+        font-size: max(12px, 3vw);
+    }
+
+    .code {
+        margin-top: 32px;
+    }
 }
