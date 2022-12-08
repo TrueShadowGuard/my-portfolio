@@ -11,7 +11,7 @@ const CurrentFile = observer(() => {
   const {width} = useWindowSize();
 
   return (
-    <div>
+    <div className={classes.currentFile}>
       {width < 1100 ? <MinFile /> : <File />}
     </div>
   );

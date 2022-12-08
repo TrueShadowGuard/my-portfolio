@@ -52,3 +52,17 @@
         white-space: normal;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .twoColumns {
+        flex-direction: column;
+    }
+
+    .firstColumn {
+        width: 100%;
+    }
+
+    .currentFile {
+        margin: 18px 12px 0 12px;
+    }
+}
