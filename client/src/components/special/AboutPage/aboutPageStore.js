@@ -22,7 +22,8 @@ const workExperience = [{
  * Developed legacy auto repair shop management software
  * Fixed bugs and developed new functionality
  * Core technologies: Backbone.js, React.js
- */`
+ */`,
+  minText: "From June 2022 to now. Developed legacy auto repair shop management software. Fixed bugs and developed new functionality. Core technologies: Backbone.js, React.js"
 }]
 
 const interests = [

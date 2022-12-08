@@ -9,12 +9,11 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import church from "../../../assets/Church.jpg";
 import tanks from "../../../assets/Tanks.png";
 import {cssTag, htmlTag, nodeTag, reactTag} from "./consts";
-import utils from "../../../utils.module.css";
 
 const ProjectsPage = observer((props) => {
     return (
         <div className={classNames(classes.root, props.className)}>
-            <div className={utils.twoColumns}>
+            <div className={classes.twoColumns}>
                 <ProjectFilters/>
                 <Projects/>
             </div>

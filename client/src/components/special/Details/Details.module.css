@@ -1,11 +1,11 @@
 .root {
     --max-height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    border-right: var(--border-1);
     border-bottom: var(--border-1);
-    width: 292px;
     height: var(--tab-height);
     display: flex;
     align-items: center;

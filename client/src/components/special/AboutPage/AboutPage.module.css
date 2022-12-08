@@ -41,3 +41,14 @@
     user-select: none;
     margin-right: 24px;
 }
+
+.twoColumns {
+    display: flex;
+    height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .currentFile {
+        white-space: normal;
+    }
+}

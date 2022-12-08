@@ -13,3 +13,8 @@
 .projects > * {
     margin: 20px;
 }
+
+.twoColumns {
+    display: flex;
+    height: 100%;
+}
