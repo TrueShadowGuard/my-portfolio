@@ -5,10 +5,17 @@
 
 .filters {
     padding-left: 22px;
+    padding-right: 22px;
     padding-top: 17px;
 }
 
 .filters > * {
     cursor: pointer;
     margin-bottom: 17px;
+}
+
+@media screen and (max-width: 665px) {
+    .root {
+        width: 100%;
+    }
 }

@@ -9,6 +9,7 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import church from "../../../assets/Church.jpg";
 import tanks from "../../../assets/Tanks.png";
 import {cssTag, htmlTag, nodeTag, reactTag} from "./consts";
+import {useWindowSize} from "usehooks-ts";
 
 const ProjectsPage = observer((props) => {
     return (
@@ -22,9 +23,12 @@ const ProjectsPage = observer((props) => {
 });
 
 const Projects = observer(() => {
+
+    const {width} = useWindowSize();
+
     return (
         <div>
-            <SubHeader tabName={projectsPageStore.filtersString}/>
+            {width >= 665 && <SubHeader tabName={projectsPageStore.filtersString}/>}
             <div className={classes.projects}>
                 {projectsPageStore.filteredProjects.map(project => <ProjectCard {...project}/>)}
             </div>

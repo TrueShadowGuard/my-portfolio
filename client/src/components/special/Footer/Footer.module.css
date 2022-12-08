@@ -46,3 +46,9 @@
     margin-left: auto;
     padding: 14px 22px 15px 23px;
 }
+
+@media screen and (max-width: 550px) {
+    .findMe {
+        display: none;
+    }
+}

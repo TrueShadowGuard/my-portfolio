@@ -1,8 +1,6 @@
 import React from "react";
 import classes from "./SubHeader.module.css";
 import classNames from "classnames";
-
-import triangle from "../../../assets/triangle.svg";
 import cross from "../../../assets/cross.svg"
 
 const SubHeader = ({header, tabName, ...props}) => {
