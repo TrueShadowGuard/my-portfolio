@@ -33,7 +33,7 @@ const CurrentFile = observer(() => {
   }
 
   function MinFile() {
-    return <div>{aboutPageStore.currentFile?.minText}</div>
+    return <div className={classes.minFile}>{aboutPageStore.currentFile?.minText}</div>
   }
 
   function File() {

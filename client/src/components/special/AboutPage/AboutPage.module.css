@@ -31,10 +31,14 @@
 }
 
 .currentFile {
-    margin-top: 18px;
+    flex-grow: 1;
     font-size: 18px;
     line-height: 27px;
     overflow: auto;
+}
+
+.minFile {
+    margin: 6px;
 }
 
 .index {
