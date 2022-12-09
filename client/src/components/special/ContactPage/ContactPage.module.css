@@ -35,3 +35,15 @@
 .textField {
     margin-bottom: 24px;
 }
+
+@media screen and (max-width: 1000px) {
+    .codeColumn {
+        display: none;
+    }
+
+    .formColumn {
+        border-right: none;
+        padding: 6px;
+        width: 100%;
+    }
+}
