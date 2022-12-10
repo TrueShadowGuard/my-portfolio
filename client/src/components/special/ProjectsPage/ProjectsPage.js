@@ -27,7 +27,7 @@ const Projects = observer(() => {
     const {width} = useWindowSize();
 
     return (
-        <div>
+        <div className={classes.projectsColumn}>
             {width >= 665 && <SubHeader tabName={projectsPageStore.filtersString}/>}
             <div className={classes.projects}>
                 {projectsPageStore.filteredProjects.map(project => <ProjectCard {...project}/>)}

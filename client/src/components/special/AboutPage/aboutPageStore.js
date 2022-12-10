@@ -43,7 +43,7 @@ const education = [
   },
   {
     name: "Gomel State Lyceum",
-    text: `Like `
+    text: `I like their canteen and grateful to Barsukov Ivan Vladimirovich for instilling a love of science`
   },
   {
     name: "BSMU",

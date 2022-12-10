@@ -19,6 +19,10 @@
     height: 100%;
 }
 
+.projectsColumn {
+    flex-grow: 1;
+}
+
 @media screen and (max-width: 665px) {
     .twoColumns {
         flex-direction: column;

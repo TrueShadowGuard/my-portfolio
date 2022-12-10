@@ -60,6 +60,7 @@ const ContactPage = () => {
             }}
           />
         </div>
+        {code !== defaultCode && <button className={classes.resetButton} onClick={resetCode}>Reset</button>}
       </div>
 
     </div>
@@ -72,6 +73,10 @@ const ContactPage = () => {
 
   function runConfetti() {
     setConfetti(true);
+  }
+
+  function resetCode() {
+    setCode(defaultCode);
   }
 }
 

@@ -19,6 +19,8 @@
 }
 
 .codeColumn {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding: 24px;
 }
@@ -34,6 +36,18 @@
 
 .textField {
     margin-bottom: 24px;
+}
+
+.resetButton {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    background: #011221;
+    border-radius: 8px;
+    padding: 10px 14px;
+
+    border: none;
+    color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
