@@ -67,6 +67,7 @@
     }
 
     .currentFile {
-        margin: 18px 12px 0 12px;
+        font-size: 1rem;
+        margin: 18px 12px 12px 12px;
     }
 }
