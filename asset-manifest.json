@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.96a475cf.css",
+    "main.css": "/my-portfolio/static/css/main.ea683a84.css",
     "main.js": "/my-portfolio/static/js/main.194c2ea5.js",
     "static/media/cardExample.jpg": "/my-portfolio/static/media/cardExample.1b18d238a71ae15a888f.jpg",
     "static/media/Church.jpg": "/my-portfolio/static/media/Church.0b48cab040a6eeb31e7c.jpg",
@@ -14,11 +14,11 @@
     "static/media/cross.svg": "/my-portfolio/static/media/cross.4811b755cb699cf71c8b9ad246758890.svg",
     "static/media/check-mark.svg": "/my-portfolio/static/media/check-mark.6a7f5b19b7a7b82c36706c8d2aa3a28c.svg",
     "static/media/triangle.svg": "/my-portfolio/static/media/triangle.851a87238aa8540cc98df5753eda599a.svg",
-    "main.96a475cf.css.map": "/my-portfolio/static/css/main.96a475cf.css.map",
+    "main.ea683a84.css.map": "/my-portfolio/static/css/main.ea683a84.css.map",
     "main.194c2ea5.js.map": "/my-portfolio/static/js/main.194c2ea5.js.map"
   },
   "entrypoints": [
-    "static/css/main.96a475cf.css",
+    "static/css/main.ea683a84.css",
     "static/js/main.194c2ea5.js"
   ]
 }
