@@ -1,5 +1,6 @@
 .root {
-    width: 370px;
+    max-width: 370px;
+    width: 100%;
 }
 
 .name {
@@ -13,7 +14,6 @@
 
 .card {
     height: 314px;
-    width: 370px;
     margin-top: 15px;
     border-radius: 15px;
     overflow: hidden;
@@ -42,4 +42,10 @@
     border: none;
     border-radius: 8px;
     color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        height: 350px;
+    }
 }
