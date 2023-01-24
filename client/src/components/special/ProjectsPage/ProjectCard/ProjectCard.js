@@ -8,7 +8,7 @@ const ProjectCard = ({name, type, description, image, deployUrl, githubUrl, ...p
     return (
         <div className={classNames(classes.root, props.className)}>
             <header className={classes.header}>
-                <a href={deployUrl} target={"_blank"} rel="noreferrer">
+                <a href={githubUrl} target={"_blank"} rel="noreferrer">
                     <p className={classes.name}>{name}&nbsp;</p>
                 </a>
                 <p className={classes.type}>// {type}</p>
@@ -18,7 +18,7 @@ const ProjectCard = ({name, type, description, image, deployUrl, githubUrl, ...p
                 <p className={classes.description}>
                     {description || "No description for this project"}
                 </p>
-                <a href={githubUrl} target={"_blank"} rel="noreferrer">
+                <a className={classes.viewProjectLink} href={deployUrl} target={"_blank"} rel="noreferrer">
                     <button className={classes.viewProjectButton}>view-project</button>
                 </a>
             </div>

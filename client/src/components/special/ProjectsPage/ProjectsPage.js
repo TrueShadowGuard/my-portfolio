@@ -8,7 +8,7 @@ import {observer} from "mobx-react-lite";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import church from "../../../assets/Church.jpg";
 import tanks from "../../../assets/Tanks.png";
-import {cssTag, htmlTag, nodeTag, reactTag} from "./consts";
+import {cssTag, htmlTag, nodeTag, projectsPageStore, reactTag} from "./projectsPageData";
 import {useWindowSize} from "usehooks-ts";
 
 const ProjectsPage = observer((props) => {
@@ -35,70 +35,5 @@ const Projects = observer(() => {
         </div>
     )
 });
-
-class ProjectsPageStore {
-    filters = {};
-    projects = [
-        {
-            name: "Church",
-            type: "_multipage-spa",
-            description: "Layout from figma and some functionality",
-            image: church,
-            githubUrl: "https://github.com/TrueShadowGuard/church",
-            deployUrl: "https://sg-church.herokuapp.com/",
-            tags: [reactTag, htmlTag, cssTag, nodeTag]
-        },
-        {
-            name: "Tanks",
-            type: "_game",
-            description: "Simple version of Battle city",
-            image: tanks,
-            githubUrl: "https://github.com/TrueShadowGuard/tanks",
-            deployUrl: "https://trueshadowguard.github.io/tanks/",
-            tags: [htmlTag, cssTag]
-        },
-        {
-            name: "Github API",
-            type: "_multipage-spa",
-            description: "Interface for some github API",
-
-            githubUrl: "https://github.com/TrueShadowGuard/github",
-            deployUrl: "https://github-paralect.netlify.app/",
-            tags: [reactTag, htmlTag, cssTag]
-        },
-    ];
-
-    constructor() {
-        makeAutoObservable(this);
-    }
-
-    setFilter(name, value) {
-        this.filters[name] = value;
-    }
-
-    get filtersString() {
-        const filters = Object.entries(this.filters).filter(([name, value]) => value);
-        if (filters.length === 0) return "All projects"
-
-        return filters
-            .map(([name]) => name)
-            .sort()
-            .join("; ");
-    }
-
-    get filteredProjects() {
-        const filters = Object.entries(this.filters)
-            .filter(([name, value]) => value)
-            .map(([name, value]) => name);
-        return this.projects
-            .filter(project =>
-                filters.every(filter => project.tags.includes(filter))
-            )
-            .sort((a,b) => a.tags.length > b.tags.length ? 1 : -1);
-    }
-}
-
-export const projectsPageStore = new ProjectsPageStore();
-window._projectsPageStore = projectsPageStore;
 
 export default ProjectsPage;

@@ -13,6 +13,8 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     height: 314px;
     margin-top: 15px;
     border-radius: 15px;
@@ -38,10 +40,14 @@
     background-color: #1C2B3A;
     padding: 10px 14px;
     margin-left: 31px;
-    margin-top: auto;
     border: none;
     border-radius: 8px;
     color: #fff;
+}
+
+.viewProjectLink {
+    margin-top: auto;
+    margin-bottom: 24px;
 }
 
 @media screen and (max-width: 400px) {

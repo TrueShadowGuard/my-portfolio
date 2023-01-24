@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./PersonalInfo.module.css"
-import FileIcon from "../../../images/FileIcon"
+import FileIcon from "../../../svg/FileIcon"
 import aboutPageStore from "../aboutPageStore"
 import classNames from "classnames"
 

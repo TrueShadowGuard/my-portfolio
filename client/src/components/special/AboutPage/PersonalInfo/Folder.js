@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import classes from "./PersonalInfo.module.css"
-import FolderIcon from "../../../images/FolderIcon"
+import FolderIcon from "../../../svg/FolderIcon"
 import classNames from "classnames"
 import File from "./File"
 

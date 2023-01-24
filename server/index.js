@@ -2,7 +2,7 @@ import express from "express";
 import "colors";
 import * as path from "path";
 
-const port = process.env.port || 80;
+const port = process.env.port || 4444;
 const staticPath = path.resolve("..", "client", "static");
 const indexHtmlPath = path.join(staticPath, "index.html");
 
